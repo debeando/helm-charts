@@ -15,17 +15,7 @@ helm repo add debeando https://debeando.github.io/helm-charts/
 
 You can then run `helm search repo debeando` to see the charts.
 
-### Installing the Chart
-
-To install the chart with the release name `demo`:
-
-```bash
-helm install demo debeando/demo
-```
-
-The command deploys `demo` on the Kubernetes cluster in the default configuration.
-
-### Update the Chart
+### Update repo
 
 Update gets the latest information about charts from the respective chart repositories. Information is cached locally, where it is used by commands like 'helm search repo debeando'.
 
@@ -33,14 +23,10 @@ Update gets the latest information about charts from the respective chart reposi
 helm repo update debeando
 ```
 
-### Uninstalling the Chart
+### Remove repo
 
-To uninstall `demo` deployment:
+Remove chart repository:
 
 ```bash
-helm uninstall pmm
+helm repo remove debeando
 ```
-
-This command takes a release name and uninstalls the release.
-
-It removes all of the resources associated with the last release of the chart as well as the release history.
