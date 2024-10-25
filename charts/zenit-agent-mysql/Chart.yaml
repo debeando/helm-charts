@@ -2,5 +2,5 @@ apiVersion: v2
 name: zenit-agent-mysql
 description: A Helm chart for DeBeAndo Zenit Agent MySQL
 type: application
-version: 1.0.0
-appVersion: 1.0.0
+version: 0.1.0
+appVersion: 0.1.0

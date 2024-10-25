@@ -1,4 +1,4 @@
-# Zenit Agent for MySQL
+# DeBeAndo Zenit Agent for MySQL
 
 zenit-agent-mysql is an open source database monitoring tool.
 
