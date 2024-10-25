@@ -31,4 +31,15 @@ entries:
     urls:
     - https://github.com/debeando/helm-charts/demo-0.1.1.tgz
     version: 0.1.1
+  zenit-agent-mysql:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2024-10-25T18:51:35.756247672Z"
+    description: A Helm chart for DeBeAndo Zenit Agent MySQL
+    digest: e416a85300273fd724f885dc72a07bc8b6c3af41bf662adf9fa01b76b0088c22
+    name: zenit-agent-mysql
+    type: application
+    urls:
+    - https://github.com/debeando/helm-charts/releases/download/zenit-agent-mysql-1.0.0/zenit-agent-mysql-1.0.0.tgz
+    version: 1.0.0
 generated: "2024-10-25T19:15:32.808897+02:00"
