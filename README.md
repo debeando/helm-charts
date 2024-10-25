@@ -1,6 +1,13 @@
-# DeBeAndo Helm
+# DeBeAndo Kubernetes Helm Charts
 
-```bash
+The code is provided as-is with no warranties.
+
+## Usage
+
+Once Helm is set up properly, add the repo as follows:
+
+```console
 helm repo add debeando https://debeando.github.io/helm-charts/
-helm install pmm debeando/demo
 ```
+
+You can then run `helm search repo debeando` to see the charts.
