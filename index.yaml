@@ -3,6 +3,16 @@ entries:
   demo:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-10-25T18:20:49.603441597Z"
+    description: A Helm chart for Kubernetes
+    digest: 6cc7aa38cf6e4d9a524869cd8dfe932a107449bf1f05a5b1315a50121b19eec1
+    name: demo
+    type: application
+    urls:
+    - https://github.com/debeando/helm-charts/releases/download/demo-0.1.3/demo-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-10-25T19:15:32.811747+02:00"
     description: A Helm chart for Kubernetes
     digest: f78997526b27b16702ceb1df63de7cd35f203180d014c2c591162eb2285b1b83
