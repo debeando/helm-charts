@@ -8,10 +8,14 @@ To install the chart with the release name `zenit-agent-mysql`:
 
 ```bash
 helm repo add debeando https://debeando.github.io/helm-charts/
-helm install zenit-agent-mysql debeando/zenit-agent-mysql
+helm install com-env-mysql-stack-node01 \
+	--set mysql_host=com-env-mysql-stack-node01.aws.com \
+	--set mysql_user=monitor \
+	--set mysql_password=passmon \
+	debeando/zenit-agent-mysql
 ```
 
-The command deploys `zenit-agent-mysql` on the Kubernetes cluster.
+The command deploys `zenit-agent-mysql` on the Kubernetes cluster. You can change the name to one more appropriate.
 
 ### Uninstalling the Chart
 
