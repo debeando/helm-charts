@@ -11,6 +11,7 @@ helm repo add debeando https://debeando.github.io/helm-charts/
 helm install com-env-mysql-stack-node01 \
 	--set MYSQL_HOST=com-env-mysql-stack-node01.aws.com \
 	--set MYSQL_USER=zenit \
+	--namespace debeando \
 	debeando/zenit-agent-mysql
 ```
 

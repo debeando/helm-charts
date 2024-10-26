@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: zenit-agent-{{ .name }}
+  name: zenit-agent-{{ .Chart.Name }}
   namespace: debeando
 spec:
   selector:
@@ -15,5 +15,5 @@ spec:
         app: zenit-agent-mysql
     spec:
       containers:
-        - name: zenit-agent-{{ .name }}
+        - name: zenit-agent-{{ .Chart.Name }}
           image: debeando/zenit-agent-mysql
