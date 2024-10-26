@@ -17,3 +17,11 @@ spec:
       containers:
         - name: zenit-agent-{{ .Release.Name }}
           image: debeando/zenit-agent-mysql
+          env:          
+            - name: "MYSQL_USER"
+              value: {{ .Values.mysql_user }}
+            - name: "MYSQL_PASSWORD"
+              valueFrom:
+                secretKeyRef:
+                  key:  password
+                  name: {{ .Release.Name }}
