@@ -1,0 +1,19 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zenit-agent-mysql
+  namespace: debeando
+spec:
+  selector:
+   matchLabels:
+    app: zenit-agent-mysql
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: zenit-agent-mysql
+    spec:
+      containers:
+        - name: zenit-agent-mysql-node01
+          image: debeando/zenit-agent-mysql
