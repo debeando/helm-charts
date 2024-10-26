@@ -18,6 +18,10 @@ spec:
         - name: zenit-agent-{{ .Release.Name }}
           image: debeando/zenit-agent-mysql
           env:
+            - name: "DEBUG"
+              value: {{ .Values.debug | quote }}
+            - name: "INTERVAL"
+              value: {{ .Values.interval | quote }}
             - name: "MYSQL_HOST"
               value: {{ .Values.mysql_host | quote }}
             - name: "MYSQL_PORT"
