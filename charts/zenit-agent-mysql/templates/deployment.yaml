@@ -19,11 +19,11 @@ spec:
           image: debeando/zenit-agent-mysql
           env:
             - name: "MYSQL_HOST"
-              value: {{ .Values.mysql_host }}
+              value: {{ .Values.mysql_host | quote }}
             - name: "MYSQL_PORT"
-              value: {{ .Values.mysql_port }}
+              value: {{ .Values.mysql_port | quote }}
             - name: "MYSQL_USER"
-              value: {{ .Values.mysql_user }}
+              value: {{ .Values.mysql_user | quote }}
             - name: "MYSQL_PASSWORD"
               valueFrom:
                 secretKeyRef:
