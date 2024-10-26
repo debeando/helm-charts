@@ -12,7 +12,6 @@ helm install com-env-mysql-stack-node01 \
 	--set mysql_host=com-env-mysql-stack-node01.aws.com \
 	--set mysql_user=monitor \
 	--set mysql_password=passmon \
-	--namespace debeando \
 	debeando/zenit-agent-mysql
 ```
 
