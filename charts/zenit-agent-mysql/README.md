@@ -9,8 +9,9 @@ To install the chart with the release name `zenit-agent-mysql`:
 ```bash
 helm repo add debeando https://debeando.github.io/helm-charts/
 helm install com-env-mysql-stack-node01 \
-	--set MYSQL_HOST=com-env-mysql-stack-node01.aws.com \
-	--set MYSQL_USER=zenit \
+	--set mysql_host=com-env-mysql-stack-node01.aws.com \
+	--set mysql_user=monitor \
+	--set mysql_password=passmon \
 	--namespace debeando \
 	debeando/zenit-agent-mysql
 ```

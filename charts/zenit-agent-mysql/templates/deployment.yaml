@@ -17,7 +17,11 @@ spec:
       containers:
         - name: zenit-agent-{{ .Release.Name }}
           image: debeando/zenit-agent-mysql
-          env:          
+          env:
+            - name: "MYSQL_HOST"
+              value: {{ .Values.mysql_host }}
+            - name: "MYSQL_PORT"
+              value: {{ .Values.mysql_port }}
             - name: "MYSQL_USER"
               value: {{ .Values.mysql_user }}
             - name: "MYSQL_PASSWORD"
