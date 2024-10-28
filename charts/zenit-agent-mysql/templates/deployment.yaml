@@ -17,13 +17,6 @@ spec:
       containers:
         - name: zenit-agent-{{ .Release.Name }}
           image: debeando/zenit-agent-mysql
-          resources:
-            limits:
-              cpu: 50m
-              memory: 16Mi
-            requests:
-              cpu: 100m
-              memory: 16Mi
           env:
             - name: "DEBUG"
               value: {{ default "false" .Values.debug | quote }}
