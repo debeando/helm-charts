@@ -31,10 +31,20 @@ spec:
               value: {{ default "10" .Values.interval | quote }}
             - name: "HOSTNAME"
               value: {{ .Values.hostname | quote }}
+            - name: "INFLUXDB_HOST"
+              value: {{ .Values.influxdb_host | quote }}
+            - name: "INFLUXDB_PORT"
+              value: {{ default "8086" .Values.influxdb_port | quote }}
+            - name: "INFLUXDB_TOKEN"
+              value: {{ .Values.influxdb_token | quote }}
+            - name: "INFLUXDB_BUCKET"
+              value: {{ default "debeando" .Values.influxdb_bucket | quote }}
             - name: "MYSQL_HOST"
               value: {{ .Values.mysql_host | quote }}
             - name: "MYSQL_PORT"
               value: {{ default "3306" .Values.mysql_port | quote }}
+            - name: "MYSQL_TIMEOUT"
+              value: {{ default "10" .Values.mysql_timeout | quote }}
             - name: "MYSQL_USER"
               value: {{ .Values.mysql_user | quote }}
             - name: "MYSQL_PASSWORD"
