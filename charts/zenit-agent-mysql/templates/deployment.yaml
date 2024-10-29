@@ -29,6 +29,8 @@ spec:
               value: {{ default "false" .Values.debug | quote }}
             - name: "INTERVAL"
               value: {{ default "10" .Values.interval | quote }}
+            - name: "HOSTNAME"
+              value: {{ .Values.hostname | quote }}
             - name: "MYSQL_HOST"
               value: {{ .Values.mysql_host | quote }}
             - name: "MYSQL_PORT"
