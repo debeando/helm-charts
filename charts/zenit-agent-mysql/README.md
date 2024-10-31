@@ -1,6 +1,6 @@
 # DeBeAndo Zenit Agent for MySQL
 
-zenit-agent-mysql is an open source database monitoring tool.
+Database monitoring tool designed for small environments, adapted for Kubernetes and send metrics to InfluxDB.
 
 ### Installing the Chart
 
