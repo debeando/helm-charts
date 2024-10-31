@@ -1,0 +1,45 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+spec:
+  selector:
+   matchLabels:
+    app: zenit-port-forward
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: zenit-port-forward
+    spec:
+      containers:
+        - name: {{ .Release.Name }}
+          image: debeando/zenit-port-forward
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "16Mi"
+            limits:
+              cpu: "100m"
+              memory: "32Mi"
+          env:
+            - name: "DEBUG"
+              value: {{ default "false" .Values.debug | quote }}
+            - name: "SSH_HOST"
+              value: {{ .Values.ssh_host | quote }}
+            - name: "SSH_PORT"
+              value: {{ default "22" .Values.ssh_port | quote }}
+            - name: "SSH_USER"
+              value: {{ default "ec2-user" .Values.ssh_user | quote }}
+            - name: "REMOTE_HOST"
+              value: {{ .Values.remote_host | quote }}
+            - name: "REMOTE_PORT"
+              value: {{ default "3306" .Values.remote_port | quote }}
+            - name: "LOCAL_PORT"
+              value: {{ default "3306" .Values.local_port | quote }}
+            - name: "SSH_KEY"
+              valueFrom:
+                secretKeyRef:
+                  key:  SSH_KEY
+                  name: {{ .Release.Name }}

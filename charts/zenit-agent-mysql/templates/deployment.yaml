@@ -2,8 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: zenit-agent-{{ .Release.Name }}
-  namespace: debeando
+  name: {{ .Release.Name }}
 spec:
   selector:
    matchLabels:
@@ -15,15 +14,15 @@ spec:
         app: zenit-agent-mysql
     spec:
       containers:
-        - name: zenit-agent-{{ .Release.Name }}
+        - name: {{ .Release.Name }}
           image: debeando/zenit-agent-mysql
           resources:
             requests:
-              cpu: "50m"
-              memory: "16Mi"
-            limits:
               cpu: "100m"
-              memory: "16Mi"
+              memory: "32Mi"
+            limits:
+              cpu: "200m"
+              memory: "128Mi"
           env:
             - name: "DEBUG"
               value: {{ default "false" .Values.debug | quote }}
