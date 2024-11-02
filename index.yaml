@@ -3,6 +3,16 @@ entries:
   zenit-agent-mysql:
   - apiVersion: v2
     appVersion: 0.2.0
+    created: "2024-11-02T20:50:21.176405812Z"
+    description: A Helm chart for DeBeAndo Zenit Agent MySQL
+    digest: 8e63a1fa43a5eb7961295eb5e791b21725836ff2081fff609aeaed315ad6128b
+    name: zenit-agent-mysql
+    type: application
+    urls:
+    - https://github.com/debeando/helm-charts/releases/download/zenit-agent-mysql-0.7.0/zenit-agent-mysql-0.7.0.tgz
+    version: 0.7.0
+  - apiVersion: v2
+    appVersion: 0.2.0
     created: "2024-10-29T16:41:23.093813425Z"
     description: A Helm chart for DeBeAndo Zenit Agent MySQL
     digest: eb2fe7bf616b35a437be4a964e1ae0d50997056df408a40224d6ded8a69c33fa
@@ -51,4 +61,15 @@ entries:
     urls:
     - https://github.com/debeando/helm-charts/releases/download/zenit-agent-mysql-0.2.0/zenit-agent-mysql-0.2.0.tgz
     version: 0.2.0
+  zenit-port-forward:
+  - apiVersion: v2
+    appVersion: 0.2.0
+    created: "2024-11-02T20:50:21.278544233Z"
+    description: A Helm chart for DeBeAndo Zenit Port Forward
+    digest: c41e1fe1acfdbf64e9cd0c5102b4ed930a02f488125abc8983b9940cbacb956e
+    name: zenit-port-forward
+    type: application
+    urls:
+    - https://github.com/debeando/helm-charts/releases/download/zenit-port-forward-0.1.0/zenit-port-forward-0.1.0.tgz
+    version: 0.1.0
 generated: "2024-10-26T11:08:46.289733+02:00"
