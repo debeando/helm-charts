@@ -1,6 +1,6 @@
 # DeBeAndo Zenit Agent for MySQL
 
-zenit-agent-mysql is an open source database monitoring tool.
+Database monitoring tool designed for small environments, adapted for Kubernetes and send metrics to InfluxDB.
 
 ### Installing the Chart
 
@@ -8,7 +8,9 @@ To install the chart with the release name `zenit-agent-mysql`:
 
 ```bash
 helm repo add debeando https://debeando.github.io/helm-charts/
-helm install com-env-mysql-stack-node01 \
+helm install agent-com-env-mysql-stack-node01 \
+	--namespace debeando \
+	--create-namespace \
 	--set debug=true \
 	--set interval=10 \
 	--set hostname=com-env-mysql-stack-node01 \
