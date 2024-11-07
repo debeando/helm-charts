@@ -7,7 +7,7 @@ Port forward over SSH, allow connect to remote server over SSH to local or priva
 To install the chart with the release name `zenit-port-forward`:
 
 ```bash
-helm repo add debeando https://debeando.github.io/helm-charts/
+helm repo add debeando https://debeando.github.io/helm-charts
 helm install port-forward-com-env-mysql-stack-node01 \
 	--namespace debeando \
 	--create-namespace \

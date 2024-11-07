@@ -28,8 +28,6 @@ spec:
               value: {{ default "false" .Values.debug | quote }}
             - name: "INTERVAL"
               value: {{ default "10" .Values.interval | quote }}
-            - name: "HOSTNAME"
-              value: {{ .Values.hostname | quote }}
             - name: "INFLUXDB_HOST"
               value: {{ .Values.influxdb_host | quote }}
             - name: "INFLUXDB_PORT"
@@ -51,3 +49,5 @@ spec:
                 secretKeyRef:
                   key:  MYSQL_PASSWORD
                   name: {{ .Release.Name }}
+            - name: "SERVER"
+              value: {{ .Values.server | quote }}

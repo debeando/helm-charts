@@ -7,18 +7,18 @@ Database monitoring tool designed for small environments, adapted for Kubernetes
 To install the chart with the release name `zenit-agent-mysql`:
 
 ```bash
-helm repo add debeando https://debeando.github.io/helm-charts/
+helm repo add debeando https://debeando.github.io/helm-charts
 helm install agent-com-env-mysql-stack-node01 \
 	--namespace debeando \
 	--create-namespace \
 	--set debug=true \
 	--set interval=10 \
-	--set hostname=com-env-mysql-stack-node01 \
 	--set influxdb_host=com-env-influxdb-observability-node01.aws.com \
 	--set influxdb_token="abc123cde456==" \
 	--set mysql_host=com-env-mysql-stack-node01.aws.com \
 	--set mysql_user=monitor \
 	--set mysql_password=passmon \
+	--set server=com-env-mysql-stack-node01 \
 	debeando/zenit-agent-mysql
 ```
 
