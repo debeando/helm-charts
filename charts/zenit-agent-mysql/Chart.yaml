@@ -3,4 +3,4 @@ name: zenit-agent-mysql
 description: A Helm chart for DeBeAndo Zenit Agent MySQL
 type: application
 version: 0.7.0
-appVersion: 0.2.0
+appVersion: 0.4.0
