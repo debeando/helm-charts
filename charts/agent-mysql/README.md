@@ -1,10 +1,10 @@
-# DeBeAndo Zenit Agent for MySQL
+# DeBeAndo Agent for MySQL
 
 Database monitoring tool designed for small environments, adapted for Kubernetes and send metrics to InfluxDB.
 
 ### Installing the Chart
 
-To install the chart with the release name `zenit-agent-mysql`:
+To install the chart with the release name `agent-mysql`:
 
 ```bash
 helm repo add debeando https://debeando.github.io/helm-charts
@@ -19,19 +19,19 @@ helm install agent-com-env-mysql-stack-node01 \
 	--set mysql_user=monitor \
 	--set mysql_password=passmon \
 	--set server=com-env-mysql-stack-node01 \
-	debeando/zenit-agent-mysql
+	debeando/agent-mysql
 ```
 
-The command deploys `zenit-agent-mysql` on the Kubernetes cluster. You can change the name to one more appropriate.
+The command deploys `agent-mysql` on the Kubernetes cluster. You can change the name to one more appropriate.
 
-For more details about environment variables to set, please visit the [repository project](https://github.com/debeando/zenit-agent-mysql/tree/main).
+For more details about environment variables to set, please visit the [repository project](https://github.com/debeando/agent-mysql/tree/main).
 
 ### Uninstalling the Chart
 
-To uninstall `zenit-agent-mysql` deployment:
+To uninstall `agent-mysql` deployment:
 
 ```bash
-helm uninstall zenit-agent-mysql
+helm uninstall agent-mysql
 ```
 
 This command takes a release name and uninstalls the release.
