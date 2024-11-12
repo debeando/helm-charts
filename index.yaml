@@ -1,5 +1,27 @@
 apiVersion: v1
 entries:
+  agent-mysql:
+  - apiVersion: v2
+    appVersion: 0.6.0
+    created: "2024-11-12T17:20:15.38388174Z"
+    description: A Helm chart for DeBeAndo Agent for MySQL
+    digest: f86af34cd37eee676d349981aed61b759b8aff5dd987da3c8a541232d65c55a6
+    name: agent-mysql
+    type: application
+    urls:
+    - https://github.com/debeando/helm-charts/releases/download/agent-mysql-0.10.0/agent-mysql-0.10.0.tgz
+    version: 0.10.0
+  port-forward:
+  - apiVersion: v2
+    appVersion: 0.3.0
+    created: "2024-11-12T17:20:15.527821436Z"
+    description: A Helm chart for DeBeAndo Port Forward
+    digest: d97032c7d7c5495c264272b2b4e06fea6e9e51ee4673241c36a9b860ceee653f
+    name: port-forward
+    type: application
+    urls:
+    - https://github.com/debeando/helm-charts/releases/download/port-forward-0.2.0/port-forward-0.2.0.tgz
+    version: 0.2.0
   zenit-agent-mysql:
   - apiVersion: v2
     appVersion: 0.5.0
