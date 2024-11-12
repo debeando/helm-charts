@@ -1,10 +1,10 @@
-# DeBeAndo Zenit Port Forward
+# DeBeAndo Port Forward
 
 Port forward over SSH, allow connect to remote server over SSH to local or private kubernetes cluster.
 
 ### Installing the Chart
 
-To install the chart with the release name `zenit-port-forward`:
+To install the chart with the release name `port-forward`:
 
 ```bash
 helm repo add debeando https://debeando.github.io/helm-charts
@@ -15,19 +15,19 @@ helm install port-forward-com-env-mysql-stack-node01 \
 	--set ssh_host="<ssh_host>" \
 	--set ssh_key="`cat /Users/<username>/.ssh/<private>.pem | base64`" \
 	--set remote_host="<mysql_host>" \
-	debeando/zenit-port-forward
+	debeando/port-forward
 ```
 
-The command deploys `zenit-port-forward` on the Kubernetes cluster. You can change the name to one more appropriate.
+The command deploys `port-forward` on the Kubernetes cluster. You can change the name to one more appropriate.
 
-For more details about environment variables to set, please visit the [repository project](https://github.com/debeando/zenit-port-forward/tree/main).
+For more details about environment variables to set, please visit the [repository project](https://github.com/debeando/port-forward/tree/main).
 
 ### Uninstalling the Chart
 
-To uninstall `zenit-port-forward` deployment:
+To uninstall `port-forward` deployment:
 
 ```bash
-helm uninstall zenit-port-forward
+helm uninstall port-forward
 ```
 
 This command takes a release name and uninstalls the release.

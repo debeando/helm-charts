@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: {{ .Release.Name }}
-          image: debeando/zenit-port-forward
+          image: debeando/port-forward
           resources:
             requests:
               cpu: "50m"

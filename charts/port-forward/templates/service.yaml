@@ -4,11 +4,11 @@ kind: Service
 metadata:
   name: {{ .Release.Name }}
   labels:
-    app: zenit-port-forward
+    app: port-forward
 spec:
   type: NodePort
   selector:
-    app: zenit-port-forward
+    app: port-forward
   ports:
   - protocol: TCP
     port: {{ default 3306 .Values.local_port }}
