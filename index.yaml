@@ -13,6 +13,16 @@ entries:
     version: 0.10.0
   port-forward:
   - apiVersion: v2
+    appVersion: 0.3.1
+    created: "2024-11-27T11:51:35.387668363Z"
+    description: A Helm chart for DeBeAndo Port Forward
+    digest: c511f03602b0fc0377daba9ddf83c713aef4b45c33cc13b345668cf90b5be637
+    name: port-forward
+    type: application
+    urls:
+    - https://github.com/debeando/helm-charts/releases/download/port-forward-0.3.0/port-forward-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
     appVersion: 0.3.0
     created: "2024-11-12T17:20:15.527821436Z"
     description: A Helm chart for DeBeAndo Port Forward
