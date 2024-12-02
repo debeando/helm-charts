@@ -6,12 +6,12 @@ metadata:
 spec:
   selector:
    matchLabels:
-    app: zenit-port-forward
+    app: port-forward
   replicas: 1
   template:
     metadata:
       labels:
-        app: zenit-port-forward
+        app: port-forward
     spec:
       containers:
         - name: {{ .Release.Name }}
