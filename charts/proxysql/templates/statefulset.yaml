@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: node
+  namespace: proxysql
+spec:
+  selector:
+    matchLabels:
+      app: proxysql
+  serviceName: proxysql
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: proxysql
+    spec:
+      containers:
+      - name: proxysql
+        image: proxysql:2.7.1
+        ports:
+        - name: mysql
+          protocol: TCP
+          containerPort: 3306
+        - name: proxysql
+          protocol: TCP
+          containerPort: 6033

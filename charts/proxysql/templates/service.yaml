@@ -1,0 +1,20 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    app: proxysql
+spec:
+  type: NodePort
+  selector:
+    app: proxysql
+  ports:
+  - name: mysql
+    protocol: TCP
+    port: 3306
+    targetPort: 3306
+  - name: proxysql
+    protocol: TCP
+    port: 6033
+    targetPort: 6033
