@@ -3,4 +3,4 @@ owners:
   - name: Nicola Strappazzon
     email: nicola@debeando.com
 ignore:
-  - name: zenit-agent-mysql:0.2.0
+  - name: zenit-agent-mysql
